@@ -2,36 +2,30 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     border: 1px solid black;
     border-radius: 8px;
     padding: 8px;
     width: 250px;
-}
 
-.contactsList {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    max-width: 1200px;
-    /* align-items: center;
-    justify-content: center; */
 }
-
 
 .contacts {
     display: flex;
     flex-direction: column;
+    width: 265px;
+
 }
 
 .contactContainer {
     display: flex;
     gap: 30px;
+
 }
 
-.contactsItem {
-    display: flex;
-    align-items: center;
-}
+.contactName {}
+
+.contactsItem {}
 
 .myIcon {
     margin-right: 10px;
