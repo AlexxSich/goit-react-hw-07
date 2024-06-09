@@ -1,23 +1,21 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { deleteContact } from '../../redux/contactsSlice';
-
+import { deleteContact } from '../../redux/contactsOps';
 import { selectFilteredContacts } from '../../redux/contactsSlice';
-
 import { FaUser, FaPhoneAlt } from 'react-icons/fa';
 import css from './Contact.module.css';
 
 export default function Contact() {
-  const filteredContacts = useSelector(selectFilteredContacts);
-
   const dispatch = useDispatch();
 
   const handleDelete = contactId => {
     dispatch(deleteContact(contactId));
   };
 
+  const visibleContacts = useSelector(selectFilteredContacts);
+
   return (
     <ul className={css.contactsList}>
-      {filteredContacts.map(contact => (
+      {visibleContacts.map(contact => (
         <li className={css.contactsItem} key={contact.id}>
           <div className={css.contactContainer}>
             <div className={css.contacts}>
